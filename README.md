@@ -21,7 +21,7 @@ Adding this to System Verilog was arguably easier than it would have been to man
 
 States 0 and 1, along with some instantiation code
 
-`
+```
 typedef enum 	logic [3:0] {S0, S1, S2, S3, S4, S5, S6, S7} statetype;
    statetype [3:0] state, nextstate;
    
@@ -56,41 +56,8 @@ typedef enum 	logic [3:0] {S0, S1, S2, S3, S4, S5, S6, S7} statetype;
 	  Rc <= 1'b0;	  	  
 	  nextstate <= S2;
        end
- `
+ ```
  
- After changing the fsm.do and fsm_tb.sv files to check the waveforms and make sure they were right, we implemented it onto a dsdb board.  That is shown below.
+ After changing the fsm.do and fsm_tb.sv files to check the waveforms and make sure they were right, we implemented it onto a dsdb board.  The hazard lights are shown below, which are only displayed when the left and right switches are triggered at the same time.
  
- ![Image](Thunderbird Tail Lights.jpg)
-
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DragonPrime10/Thunderbird-FSM/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+ ![Image](Hazard Lights.jpg)
